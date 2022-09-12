@@ -3,12 +3,12 @@
   xmlns:atom="http://www.w3.org/2005/Atom"
   xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>GYX Home</title>
+    <title>GYXs Home</title>
     <link>https://guoyuanxin.top/</link>
     
     <atom:link href="https://guoyuanxin.top/rss2.xml" rel="self" type="application/rss+xml"/>
     
-    <description>这个人很懒，什么也没写</description>
+    <description>记录学习生活中的点滴</description>
     <pubDate>Mon, 12 Sep 2022 03:37:55 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
