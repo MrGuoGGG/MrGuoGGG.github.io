@@ -4,9 +4,9 @@
   xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>GYX Home</title>
-    <link>http://example.com/</link>
+    <link>https://guoyuanxin.top/</link>
     
-    <atom:link href="http://example.com/rss2.xml" rel="self" type="application/rss+xml"/>
+    <atom:link href="https://guoyuanxin.top/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>这个人很懒，什么也没写</description>
     <pubDate>Mon, 12 Sep 2022 03:37:55 GMT</pubDate>
@@ -14,25 +14,25 @@
     
     <item>
       <title>newpapername</title>
-      <link>http://example.com/2022/09/12/newpapername/</link>
-      <guid>http://example.com/2022/09/12/newpapername/</guid>
+      <link>https://guoyuanxin.top/2022/09/12/newpapername/</link>
+      <guid>https://guoyuanxin.top/2022/09/12/newpapername/</guid>
       <pubDate>Mon, 12 Sep 2022 03:35:21 GMT</pubDate>
       
       
       
       
       
-      <category domain="http://example.com/tags/%E6%B5%8B%E8%AF%95%E4%BD%BF%E7%94%A8/">测试使用</category>
+      <category domain="https://guoyuanxin.top/tags/%E6%B5%8B%E8%AF%95%E4%BD%BF%E7%94%A8/">测试使用</category>
       
       
-      <comments>http://example.com/2022/09/12/newpapername/#disqus_thread</comments>
+      <comments>https://guoyuanxin.top/2022/09/12/newpapername/#disqus_thread</comments>
       
     </item>
     
     <item>
       <title>Hello World</title>
-      <link>http://example.com/2022/09/11/hello-world/</link>
-      <guid>http://example.com/2022/09/11/hello-world/</guid>
+      <link>https://guoyuanxin.top/2022/09/11/hello-world/</link>
+      <guid>https://guoyuanxin.top/2022/09/11/hello-world/</guid>
       <pubDate>Sun, 11 Sep 2022 14:19:40 GMT</pubDate>
       
         
@@ -42,12 +42,12 @@
       
       
       
-      <content:encoded><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content:encoded>
+      <content:encoded><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content:encoded>
       
       
       
       
-      <comments>http://example.com/2022/09/11/hello-world/#disqus_thread</comments>
+      <comments>https://guoyuanxin.top/2022/09/11/hello-world/#disqus_thread</comments>
       
     </item>
     
