@@ -9,23 +9,30 @@
     <atom:link href="https://guoyuanxin.top/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>记录学习生活中的点滴</description>
-    <pubDate>Mon, 12 Sep 2022 03:37:55 GMT</pubDate>
+    <pubDate>Tue, 13 Sep 2022 01:37:48 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
-      <title>newpapername</title>
-      <link>https://guoyuanxin.top/2022/09/12/newpapername/</link>
-      <guid>https://guoyuanxin.top/2022/09/12/newpapername/</guid>
-      <pubDate>Mon, 12 Sep 2022 03:35:21 GMT</pubDate>
+      <title>blog1</title>
+      <link>https://guoyuanxin.top/2022/09/13/blog1/</link>
+      <guid>https://guoyuanxin.top/2022/09/13/blog1/</guid>
+      <pubDate>Tue, 13 Sep 2022 01:26:02 GMT</pubDate>
+      
+        
+        
+      <description>&lt;p&gt;#细心&lt;br&gt;作为一个没有任何经验的小白，初次尝试搭建自己的博客对我来说是一件既新奇又充满挑战的一件事。在搭建hexo环境和优化blog界面时传来的一次又一次报错差点使我放弃，但是在慢慢查阅教程和自己一步一步检查之后还是克服了这些困难，做出了这个“初级品”，也算是没有辜负两</description>
+        
       
       
       
+      <content:encoded><![CDATA[<p>#细心<br>作为一个没有任何经验的小白，初次尝试搭建自己的博客对我来说是一件既新奇又充满挑战的一件事。在搭建hexo环境和优化blog界面时传来的一次又一次报错差点使我放弃，但是在慢慢查阅教程和自己一步一步检查之后还是克服了这些困难，做出了这个“初级品”，也算是没有辜负两天来的努力。<br>#坚持<br>万事开头难，我也是迈出了从0到1的关键一步，接下来我将在此blog中分享自己的学习心得，记录自己的心路历程，总结经验、改正不足。<br>#挑战<br>希望自己可以通过努力变成一个发量惊人的程序猿吧哈哈哈</p>]]></content:encoded>
       
       
-      <category domain="https://guoyuanxin.top/tags/%E6%B5%8B%E8%AF%95%E4%BD%BF%E7%94%A8/">测试使用</category>
+      
+      <category domain="https://guoyuanxin.top/tags/%E5%AD%A6%E4%B9%A0%E5%BF%83%E5%BE%97/">学习心得</category>
       
       
-      <comments>https://guoyuanxin.top/2022/09/12/newpapername/#disqus_thread</comments>
+      <comments>https://guoyuanxin.top/2022/09/13/blog1/#disqus_thread</comments>
       
     </item>
     
