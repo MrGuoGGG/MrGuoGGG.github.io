@@ -9,8 +9,33 @@
     <atom:link href="https://guoyuanxin.top/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>记录学习生活中的点滴</description>
-    <pubDate>Tue, 13 Sep 2022 14:59:06 GMT</pubDate>
+    <pubDate>Tue, 13 Sep 2022 15:46:21 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>markdown学习心得</title>
+      <link>https://guoyuanxin.top/2022/09/13/markdown%E5%AD%A6%E4%B9%A0/</link>
+      <guid>https://guoyuanxin.top/2022/09/13/markdown%E5%AD%A6%E4%B9%A0/</guid>
+      <pubDate>Tue, 13 Sep 2022 15:35:42 GMT</pubDate>
+      
+        
+        
+      <description>&lt;p&gt;#此篇用来记录markdown中的指令及操作&lt;/p&gt;
+</description>
+        
+      
+      
+      
+      <content:encoded><![CDATA[<p>#此篇用来记录markdown中的指令及操作</p>]]></content:encoded>
+      
+      
+      
+      <category domain="https://guoyuanxin.top/tags/MarkDown%E5%AD%A6%E4%B9%A0/">MarkDown学习</category>
+      
+      
+      <comments>https://guoyuanxin.top/2022/09/13/markdown%E5%AD%A6%E4%B9%A0/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>初建此站</title>
