@@ -8,7 +8,7 @@
       <link href="/2022/09/13/%E5%88%9D%E5%BB%BA%E6%AD%A4%E7%AB%99/"/>
       <url>/2022/09/13/%E5%88%9D%E5%BB%BA%E6%AD%A4%E7%AB%99/</url>
       
-        <content type="html"><![CDATA[<p>#细心<br>作为一个没有任何经验的小白，初次尝试搭建自己的博客对我来说是一件既新奇又充满挑战的一件事。在搭建hexo环境和优化blog界面时传来的一次又一次报错差点使我放弃，但是在慢慢查阅教程和自己一步一步检查之后还是克服了这些困难，做出了这个“初级品”，也算是没有辜负两天来的努力。<br>#坚持<br>万事开头难，我也是迈出了从0到1的关键一步，接下来我将在此blog中分享自己的学习心得，记录自己的心路历程，总结经验、改正不足。<br>#挑战<br>希望自己可以通过努力变成一个发量惊人的程序猿吧</p><p><img src="https://tse2-mm.cn.bing.net/th/id/OIP-C.y8xcb1YnQSuZAhLbWQJmpQHaE7?w=237&h=185&c=7&r=0&o=5&dpr=1.25&pid=1.7" alt="图片"></p>]]></content>
+        <content type="html"><![CDATA[<p>#记于2022.9.11<br>##细心<br>作为一个没有任何经验的小白，初次尝试搭建自己的博客对我来说是一件既新奇又充满挑战的一件事。在搭建hexo环境和优化blog界面时传来的一次又一次报错差点使我放弃，但是在慢慢查阅教程和自己一步一步检查之后还是克服了这些困难，做出了这个“初级品”，也算是没有辜负两天来的努力。<br>##坚持<br>万事开头难，我也是迈出了从0到1的关键一步，接下来我将在此blog中分享自己的学习心得，记录自己的心路历程，总结经验、改正不足。<br>##目标<br>希望自己可以通过努力变成一个发量惊人的程序猿吧</p><p>#记于2022.9.13晚、<br>调试了这么多天，尝试了很多花里胡哨的内容，突然发现这些跟学习基本上没啥关系。还是要不忘初心，多对学习进行记录，其他的功能就在学有余力的时候进行设置吧。此站雏形基本就这样了</p>]]></content>
       
       
       
@@ -17,19 +17,6 @@
             <tag> 学习心得 </tag>
             
         </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Hello World</title>
-      <link href="/2022/09/11/hello-world/"/>
-      <url>/2022/09/11/hello-world/</url>
-      
-        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
-      
-      
       
     </entry>
     
