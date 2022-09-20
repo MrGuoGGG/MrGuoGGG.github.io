@@ -9,7 +9,7 @@
     <atom:link href="https://guoyuanxin.top/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>记录学习生活中的点滴</description>
-    <pubDate>Sun, 18 Sep 2022 02:44:17 GMT</pubDate>
+    <pubDate>Tue, 20 Sep 2022 04:56:59 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
@@ -20,13 +20,13 @@
       
         
         
-      <description>&lt;p&gt;待更新&lt;/p&gt;
-</description>
+      <description>&lt;p&gt;更新于2022.9.20&lt;/p&gt;
+&lt;h1 id=&quot;第六章-类与对象&quot;&gt;&lt;a href=&quot;#第六章-类与对象&quot; class=&quot;headerlink&quot; title=&quot;第六章 类与对象&quot;&gt;&lt;/a&gt;第六章 类与对象&lt;/h1&gt;&lt;p&gt;面向对象的编程思想是力图使在计算机语言中对事物的描述</description>
         
       
       
       
-      <content:encoded><![CDATA[<p>待更新</p>]]></content:encoded>
+      <content:encoded><![CDATA[<p>更新于2022.9.20</p><h1 id="第六章-类与对象"><a href="#第六章-类与对象" class="headerlink" title="第六章 类与对象"></a>第六章 类与对象</h1><p>面向对象的编程思想是力图使在计算机语言中对事物的描述与现实世界中该事物的本来面目尽可能相一致。类和对象是面向对象程序设计中最核心的概念。</p><h2 id="6-1-类的基本概念"><a href="#6-1-类的基本概念" class="headerlink" title="6.1 类的基本概念"></a>6.1 类的基本概念</h2><ul><li>类是对某一事物的描述，是抽象的、概念上的定义</li><li>对象是实际存在的属该类事物的具体个体，因而也称为实例</li><li>类是由数据成员和函数成员封装而成的，数据成员表示类的属性，函数成员表示类的行为。由此可见，类描述了对象的属性和对象的行为<br><strong>面向对象程序设计思想的重点是类的设计，而不是对象的设计</strong></li></ul><h2 id="6-2-定义类"><a href="#6-2-定义类" class="headerlink" title="6.2 定义类"></a>6.2 定义类</h2><p>由于类是将数据和方法封装在一起的数据结构，因此定义类就是定义类的属性和方法。<br>在使用类之前，必须先定义它，然后才可以利用所定义的类来声明相应的变量，并创建对象</p><ol><li>类的一般结构</li></ol><p>定义类的一般结构</p><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">[类修饰符] class 类名称&#123;</span><br><span class="line">[修饰符] 数据类型 成员变量名称；</span><br><span class="line">......</span><br><span class="line">[修饰符] 返回值的数据类型 方法名（参数<span class="number">1</span>，参数<span class="number">2</span> ...）&#123;</span><br><span class="line">语句序列；</span><br><span class="line"><span class="keyword">return</span> [表达式];</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure><ul><li>[]中的修饰符是可选项，它是一组限定类、成员变量和成员方法是否可以被程序员中的其他部分访问和调用的控制符。</li></ul><ol start="2"><li>成员变量<br>一个类的成员变量描述了该类的内部信息，一个成员变量可以是基本类型变量，也可以是对象、数组等其他引用型数据。成员变量的格式如下：<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">[修饰符] 变量类型 变量名；</span><br></pre></td></tr></table></figure>3.成员方法<br>类的方法是用来定义对类的成员变量进行操作的，是实现类内部功能的机制，同时也是类与外界进行交互的窗口。声明如下：<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">[修饰符] 返回值的数据类型 方法名（参数<span class="number">1</span>，参数<span class="number">2</span> ...）&#123;</span><br><span class="line">语句序列；</span><br><span class="line"><span class="keyword">return</span> [表达式];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li><li>成员变量与局部变量的区别</li></ol><ul><li>类中定义的变量是成员变量，方法中定义的变量是局部变量</li><li>成员变量是属于类的，局部变量是方法中定义的变量或方法的参数</li><li>成员变量是对象的一部分，对象是存在于堆内存的，局部变量是存在于栈内存的</li><li>成员变量是对象的一部分，随着对象的创建而存在，局部变量随着方法的调用而产生，随着方法调用的结束而消失</li><li>成员变量如果没有被赋初值，则会自动以类型的默认值赋初值，局部变量不会自动赋值，必须显式地赋值后才能使用</li></ul><h2 id="6-3-类的UML图"><a href="#6-3-类的UML图" class="headerlink" title="6.3 类的UML图"></a>6.3 类的UML图</h2><p>待学习</p><h2 id="6-4-对象的创建与使用"><a href="#6-4-对象的创建与使用" class="headerlink" title="6.4 对象的创建与使用"></a>6.4 对象的创建与使用</h2>]]></content:encoded>
       
       
       
