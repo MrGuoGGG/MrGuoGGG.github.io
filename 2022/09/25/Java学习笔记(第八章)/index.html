@@ -1,0 +1,242 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>Java学习笔记（第八章） | GYXs Home</title><meta name="keywords" content="Java"><meta name="author" content="Mr.Guo"><meta name="copyright" content="Mr.Guo"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="第八章 继承、抽象类、接口和枚举更新于2022.10.5早 8.1 类的继承 被继承的类称为父类，由继承而得到的类称为子类。 一个父类可同时有多个子类，但一个子类只能有一个父类。 父类实际上是所有子类的公共成员的集合，每一个子类是父类的特殊化，是对公共成员变量和方法在功能、内涵上的扩展和延伸。 子类继承父类可访问的成员变量和方法，同时可以修改父类的成员变量或重写父类的方法，也可以添加新的成员变量和">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java学习笔记（第八章）">
+<meta property="og:url" content="https://guoyuanxin.top/2022/09/25/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(%E7%AC%AC%E5%85%AB%E7%AB%A0)/index.html">
+<meta property="og:site_name" content="GYXs Home">
+<meta property="og:description" content="第八章 继承、抽象类、接口和枚举更新于2022.10.5早 8.1 类的继承 被继承的类称为父类，由继承而得到的类称为子类。 一个父类可同时有多个子类，但一个子类只能有一个父类。 父类实际上是所有子类的公共成员的集合，每一个子类是父类的特殊化，是对公共成员变量和方法在功能、内涵上的扩展和延伸。 子类继承父类可访问的成员变量和方法，同时可以修改父类的成员变量或重写父类的方法，也可以添加新的成员变量和">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://img.zcool.cn/community/0191d75b56c8fea8012036be9b3118.jpg@1280w_1l_2o_100sh.jpg">
+<meta property="article:published_time" content="2022-09-25T01:14:44.000Z">
+<meta property="article:modified_time" content="2022-10-06T01:45:42.422Z">
+<meta property="article:author" content="Mr.Guo">
+<meta property="article:tag" content="Java">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://img.zcool.cn/community/0191d75b56c8fea8012036be9b3118.jpg@1280w_1l_2o_100sh.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://guoyuanxin.top/2022/09/25/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(%E7%AC%AC%E5%85%AB%E7%AB%A0)/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Java学习笔记（第八章）',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-10-06 09:45:42'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="/css/background.css"><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/rss2.xml" title="GYXs Home" type="application/rss+xml">
+</head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/loading.gif" data-original="/img/avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">12</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">4</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-graduation-cap"></i><span> 博文</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fa fa-folder-open"></i><span> 归档</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于笔者</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://img.zcool.cn/community/0191d75b56c8fea8012036be9b3118.jpg@1280w_1l_2o_100sh.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">GYXs Home</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-graduation-cap"></i><span> 博文</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fa fa-folder-open"></i><span> 归档</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于笔者</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">Java学习笔记（第八章）</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-09-25T01:14:44.000Z" title="发表于 2022-09-25 09:14:44">2022-09-25</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-10-06T01:45:42.422Z" title="更新于 2022-10-06 09:45:42">2022-10-06</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">1.3k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>3分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="Java学习笔记（第八章）"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span><span class="post-meta-separator">|</span><span class="post-meta-commentcount"><i class="far fa-comments fa-fw post-meta-icon"></i><span class="post-meta-label">评论数:</span><a href="/2022/09/25/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(%E7%AC%AC%E5%85%AB%E7%AB%A0)/#post-comment" itemprop="discussionUrl"><span class="valine-comment-count" data-xid="/2022/09/25/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(%E7%AC%AC%E5%85%AB%E7%AB%A0)/" itemprop="commentCount"><i class="fa-solid fa-spinner fa-spin"></i></span></a></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="第八章-继承、抽象类、接口和枚举"><a href="#第八章-继承、抽象类、接口和枚举" class="headerlink" title="第八章 继承、抽象类、接口和枚举"></a>第八章 继承、抽象类、接口和枚举</h1><p>更新于2022.10.5早</p>
+<h2 id="8-1-类的继承"><a href="#8-1-类的继承" class="headerlink" title="8.1 类的继承"></a>8.1 类的继承</h2><ul>
+<li>被继承的类称为父类，由继承而得到的类称为子类。</li>
+<li>一个父类可同时有多个子类，但一个子类只能有一个父类。</li>
+<li>父类实际上是所有子类的公共成员的集合，每一个子类是父类的特殊化，是对公共成员变量和方法在功能、内涵上的扩展和延伸。</li>
+<li>子类继承父类可访问的成员变量和方法，同时可以修改父类的成员变量或重写父类的方法，也可以添加新的成员变量和方法。</li>
+<li>在Java语言中有一个名为Object的类，所有的类都是直接或间接继承该类得到的。</li>
+</ul>
+<h3 id="8-1-1-子类的创建与继承关系的uml图"><a href="#8-1-1-子类的创建与继承关系的uml图" class="headerlink" title="8.1.1 子类的创建与继承关系的uml图"></a>8.1.1 子类的创建与继承关系的uml图</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">class 子类名 extends 父类名&#123;</span><br><span class="line">	...</span><br><span class="line">	...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>####1. 子类的构建方法</p>
+<p>子类的每个对象也是其父类的对象，反之则不然。</p>
+<p>子类继承父类的UML图用带空心三角箭头的实线描述，实线的起始是子类的UML图，终点是父类的UML图。</p>
+<ul>
+<li>在Java语言的继承中，执行子类的构造方法之前，会先调用父类中没有参数的构造方法，其目的是帮助继承自弗雷德成员做初始化操作。</li>
+<li>一般情况下，最好为每个类提供一个无参构造方法。</li>
+</ul>
+<p>####2. 调用父类中特定的构造方法</p>
+<ul>
+<li>使用super(参数列表)语句。super()可以重载，即super会根据参数的类型和个数，执行父类相应的构造函数。</li>
+<li>调用父类方法的super语句必须写在子类构造函数的第一行，否则编译时将出现错误。</li>
+<li>Java程序在执行子类的构造函数之前，如果没有用super来调用父类中特定的构造函数，则编译器就会把super()作为构造函数的第一条语句，调用父类中没有参数的构造函数。</li>
+<li>super()与this()功能相似，但super是从子类的构造方法调用父类的构造方法，this则是在同一个类内调用其他的构造方法。</li>
+<li>super()与this()必须放在构造函数内的第一行，因此无法共存于同一个构造函数内。</li>
+</ul>
+<h3 id="8-1-2-在子类中访问父类的成员"><a href="#8-1-2-在子类中访问父类的成员" class="headerlink" title="8.1.2 在子类中访问父类的成员"></a>8.1.2 在子类中访问父类的成员</h3><p>在子类中使用super不但可以访问父类中的构造函数，还可以访问父类的成员变量和成员函数，但super不能访问在子类中添加的成员。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="built_in">super</span>.变量名;</span><br><span class="line"><span class="built_in">super</span>.方法名();</span><br></pre></td></tr></table></figure>
+<p>由于在子类中不能继承父类中的private成员，所以无法在子类中访问父类的这种成员，但protected可以访问。</p>
+<h3 id="8-1-3-覆盖"><a href="#8-1-3-覆盖" class="headerlink" title="8.1.3 覆盖"></a>8.1.3 覆盖</h3><p>覆盖与重载相似，都是Java多态的技巧。<br>覆盖是指在子类中，定义名称、参数个数与类型均与父类中完全相同的函数，用来重写父类里同名函数的功能。</p>
+<p>####1. 覆盖父类的函数<br>子类继承父类中所有可被访问的成员函数时，如果子类的方法头与父类中的方法头完全相同，则不能继承，此时子类的方法覆盖父类的方法。</p>
+<p>###2.用父类的对象访问子类的成员<br>当指向子类对象的引用赋值给父类的引用变量时，只能访问子类对象在父类中定义的那些部分。</p>
+<ul>
+<li>创建父类类型的变量指向子类对象，称为<strong>向上转型</strong>，是安全的；同时也有<strong>向下转型</strong>。当在程序中使用向下转型技术时，必须使用显式类型转换。</li>
+</ul>
+<h3 id="8-1-4-不可被继承的成员与最终类"><a href="#8-1-4-不可被继承的成员与最终类" class="headerlink" title="8.1.4 不可被继承的成员与最终类"></a>8.1.4 不可被继承的成员与最终类</h3><p>在默认情况下，所有的成员变量和成员函数都可以被覆盖，如果父类的成员不希望被子类的成员所覆盖，则可以将他们声明为final。<br>用final修饰的成员变量称为最终变量<br>用final修饰的成员方法称为最终方法，二者都不可被覆盖。<br>如果一个类被final所修饰，则说明这个类不能够在被其他类所继承，称为最终类。</p>
+<ul>
+<li>所有已被private修饰符限定为私有的方法，以及所有包含在final类中的方法，都被默认为是final的。</li>
+</ul>
+<h3 id="8-1-5-Object类"><a href="#8-1-5-Object类" class="headerlink" title="8.1.5 Object类"></a>8.1.5 Object类</h3><p>|常用方法|功能说明|<br>|public boolean equals(···)|判断两个对象变量所指向的是否为同一个对象|<br>|public String toString|将调用toString()方法的对象转换为字符串|<br>|public final Class getClass()|返回运行时对象所属的类|<br>|protected Object clone()|返回调用该方法的对象的一个副本|</p>
+<h3 id="8-1-6-局部变量类型推断与继承"><a href="#8-1-6-局部变量类型推断与继承" class="headerlink" title="8.1.6 局部变量类型推断与继承"></a>8.1.6 局部变量类型推断与继承</h3><p>待更新</p>
+<h2 id="8-2-抽象类"><a href="#8-2-抽象类" class="headerlink" title="8.2 抽象类"></a>8.2 抽象类</h2><p>待更新</p>
+<h2 id="8-3-接口"><a href="#8-3-接口" class="headerlink" title="8.3 接口"></a>8.3 接口</h2><p>待更新</p>
+<h2 id="8-4-枚举"><a href="#8-4-枚举" class="headerlink" title="8.4 枚举"></a>8.4 枚举</h2><p>待更新</p>
+<h2 id="8-5-包"><a href="#8-5-包" class="headerlink" title="8.5 包"></a>8.5 包</h2><p>待更新</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="https://guoyuanxin.top">Mr.Guo</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://guoyuanxin.top/2022/09/25/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(%E7%AC%AC%E5%85%AB%E7%AB%A0)/">https://guoyuanxin.top/2022/09/25/Java学习笔记(第八章)/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://guoyuanxin.top" target="_blank">GYXs Home</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Java/">Java</a></div><div class="post_share"><div class="social-share" data-image="https://img.zcool.cn/community/0191d75b56c8fea8012036be9b3118.jpg@1280w_1l_2o_100sh.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i> 打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/wechat.jpg" target="_blank"><img class="post-qr-code-img" src="/img/loading.gif" data-original="/img/wechat.jpg" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="/img/alipay.jpg" target="_blank"><img class="post-qr-code-img" src="/img/loading.gif" data-original="/img/alipay.jpg" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2022/09/25/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(%E7%AC%AC%E4%B8%83%E7%AB%A0)/"><img class="prev-cover" src="/img/loading.gif" data-original="https://img.zcool.cn/community/01158c5a662204a80120a123fc1b28.png@1280w_1l_2o_100sh.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">Java学习笔记（第七章）</div></div></a></div><div class="next-post pull-right"><a href="/2022/09/18/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(%E7%AC%AC%E5%85%AD%E7%AB%A0)/"><img class="next-cover" src="/img/loading.gif" data-original="https://img.zcool.cn/community/012d365aa88c9fa80121246d981d9a.jpg@1280w_1l_2o_100sh.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">Java学习笔记（第六章）</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2022/09/25/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(%E7%AC%AC%E4%B8%83%E7%AB%A0)/" title="Java学习笔记（第七章）"><img class="cover" src="/img/loading.gif" data-original="https://img.zcool.cn/community/01158c5a662204a80120a123fc1b28.png@1280w_1l_2o_100sh.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-09-25</div><div class="title">Java学习笔记（第七章）</div></div></a></div><div><a href="/2022/09/14/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(%E5%89%8D%E5%9B%9B%E7%AB%A0)/" title="Java学习笔记（前四章）"><img class="cover" src="/img/loading.gif" data-original="https://img.zcool.cn/community/012d365aa88c9fa80121246d981d9a.jpg@1280w_1l_2o_100sh.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-09-14</div><div class="title">Java学习笔记（前四章）</div></div></a></div><div><a href="/2022/10/06/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(%E7%AC%AC%E4%B9%9D%E7%AB%A0)/" title="Java学习笔记（第九章）"><img class="cover" src="/img/loading.gif" data-original="https://img.zcool.cn/community/01158c5a662204a80120a123fc1b28.png@1280w_1l_2o_100sh.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-10-06</div><div class="title">Java学习笔记（第九章）</div></div></a></div><div><a href="/2022/09/15/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(%E7%AC%AC%E4%BA%94%E7%AB%A0)/" title="Java学习笔记（第五章）"><img class="cover" src="/img/loading.gif" data-original="https://img.zcool.cn/community/01158c5a662204a80120a123fc1b28.png@1280w_1l_2o_100sh.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-09-15</div><div class="title">Java学习笔记（第五章）</div></div></a></div><div><a href="/2022/09/18/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(%E7%AC%AC%E5%85%AD%E7%AB%A0)/" title="Java学习笔记（第六章）"><img class="cover" src="/img/loading.gif" data-original="https://img.zcool.cn/community/012d365aa88c9fa80121246d981d9a.jpg@1280w_1l_2o_100sh.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-09-18</div><div class="title">Java学习笔记（第六章）</div></div></a></div><div><a href="/2022/10/05/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(%E7%AC%AC%E5%8D%81%E4%B8%80%E7%AB%A0)/" title="Java学习笔记（第十一章）"><img class="cover" src="/img/loading.gif" data-original="https://img.zcool.cn/community/0191d75b56c8fea8012036be9b3118.jpg@1280w_1l_2o_100sh.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-10-05</div><div class="title">Java学习笔记（第十一章）</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/loading.gif" data-original="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Mr.Guo</div><div class="author-info__description">记录学习生活中的点滴</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">12</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">4</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/MrGuoGGG"><i class="fab fa-github"></i><span>GitHub</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/MrGuoGGG" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:1604059807@qq.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E5%85%AB%E7%AB%A0-%E7%BB%A7%E6%89%BF%E3%80%81%E6%8A%BD%E8%B1%A1%E7%B1%BB%E3%80%81%E6%8E%A5%E5%8F%A3%E5%92%8C%E6%9E%9A%E4%B8%BE"><span class="toc-number">1.</span> <span class="toc-text">第八章 继承、抽象类、接口和枚举</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#8-1-%E7%B1%BB%E7%9A%84%E7%BB%A7%E6%89%BF"><span class="toc-number">1.1.</span> <span class="toc-text">8.1 类的继承</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#8-1-1-%E5%AD%90%E7%B1%BB%E7%9A%84%E5%88%9B%E5%BB%BA%E4%B8%8E%E7%BB%A7%E6%89%BF%E5%85%B3%E7%B3%BB%E7%9A%84uml%E5%9B%BE"><span class="toc-number">1.1.1.</span> <span class="toc-text">8.1.1 子类的创建与继承关系的uml图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-1-2-%E5%9C%A8%E5%AD%90%E7%B1%BB%E4%B8%AD%E8%AE%BF%E9%97%AE%E7%88%B6%E7%B1%BB%E7%9A%84%E6%88%90%E5%91%98"><span class="toc-number">1.1.2.</span> <span class="toc-text">8.1.2 在子类中访问父类的成员</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-1-3-%E8%A6%86%E7%9B%96"><span class="toc-number">1.1.3.</span> <span class="toc-text">8.1.3 覆盖</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-1-4-%E4%B8%8D%E5%8F%AF%E8%A2%AB%E7%BB%A7%E6%89%BF%E7%9A%84%E6%88%90%E5%91%98%E4%B8%8E%E6%9C%80%E7%BB%88%E7%B1%BB"><span class="toc-number">1.1.4.</span> <span class="toc-text">8.1.4 不可被继承的成员与最终类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-1-5-Object%E7%B1%BB"><span class="toc-number">1.1.5.</span> <span class="toc-text">8.1.5 Object类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-1-6-%E5%B1%80%E9%83%A8%E5%8F%98%E9%87%8F%E7%B1%BB%E5%9E%8B%E6%8E%A8%E6%96%AD%E4%B8%8E%E7%BB%A7%E6%89%BF"><span class="toc-number">1.1.6.</span> <span class="toc-text">8.1.6 局部变量类型推断与继承</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-2-%E6%8A%BD%E8%B1%A1%E7%B1%BB"><span class="toc-number">1.2.</span> <span class="toc-text">8.2 抽象类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-3-%E6%8E%A5%E5%8F%A3"><span class="toc-number">1.3.</span> <span class="toc-text">8.3 接口</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-4-%E6%9E%9A%E4%B8%BE"><span class="toc-number">1.4.</span> <span class="toc-text">8.4 枚举</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-5-%E5%8C%85"><span class="toc-number">1.5.</span> <span class="toc-text">8.5 包</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2022/10/06/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(%E7%AC%AC%E4%B9%9D%E7%AB%A0)/" title="Java学习笔记（第九章）"><img src="/img/loading.gif" data-original="https://img.zcool.cn/community/01158c5a662204a80120a123fc1b28.png@1280w_1l_2o_100sh.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Java学习笔记（第九章）"/></a><div class="content"><a class="title" href="/2022/10/06/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(%E7%AC%AC%E4%B9%9D%E7%AB%A0)/" title="Java学习笔记（第九章）">Java学习笔记（第九章）</a><time datetime="2022-10-06T01:14:44.000Z" title="发表于 2022-10-06 09:14:44">2022-10-06</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/10/05/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(%E7%AC%AC%E5%8D%81%E4%B8%80%E7%AB%A0)/" title="Java学习笔记（第十一章）"><img src="/img/loading.gif" data-original="https://img.zcool.cn/community/0191d75b56c8fea8012036be9b3118.jpg@1280w_1l_2o_100sh.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Java学习笔记（第十一章）"/></a><div class="content"><a class="title" href="/2022/10/05/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(%E7%AC%AC%E5%8D%81%E4%B8%80%E7%AB%A0)/" title="Java学习笔记（第十一章）">Java学习笔记（第十一章）</a><time datetime="2022-10-05T02:17:14.000Z" title="发表于 2022-10-05 10:17:14">2022-10-05</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/09/25/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(%E7%AC%AC%E4%B8%83%E7%AB%A0)/" title="Java学习笔记（第七章）"><img src="/img/loading.gif" data-original="https://img.zcool.cn/community/01158c5a662204a80120a123fc1b28.png@1280w_1l_2o_100sh.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Java学习笔记（第七章）"/></a><div class="content"><a class="title" href="/2022/09/25/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(%E7%AC%AC%E4%B8%83%E7%AB%A0)/" title="Java学习笔记（第七章）">Java学习笔记（第七章）</a><time datetime="2022-09-25T01:14:44.000Z" title="发表于 2022-09-25 09:14:44">2022-09-25</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/09/25/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(%E7%AC%AC%E5%85%AB%E7%AB%A0)/" title="Java学习笔记（第八章）"><img src="/img/loading.gif" data-original="https://img.zcool.cn/community/0191d75b56c8fea8012036be9b3118.jpg@1280w_1l_2o_100sh.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Java学习笔记（第八章）"/></a><div class="content"><a class="title" href="/2022/09/25/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(%E7%AC%AC%E5%85%AB%E7%AB%A0)/" title="Java学习笔记（第八章）">Java学习笔记（第八章）</a><time datetime="2022-09-25T01:14:44.000Z" title="发表于 2022-09-25 09:14:44">2022-09-25</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/09/18/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(%E7%AC%AC%E5%85%AD%E7%AB%A0)/" title="Java学习笔记（第六章）"><img src="/img/loading.gif" data-original="https://img.zcool.cn/community/012d365aa88c9fa80121246d981d9a.jpg@1280w_1l_2o_100sh.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Java学习笔记（第六章）"/></a><div class="content"><a class="title" href="/2022/09/18/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(%E7%AC%AC%E5%85%AD%E7%AB%A0)/" title="Java学习笔记（第六章）">Java学习笔记（第六章）</a><time datetime="2022-09-18T02:43:15.000Z" title="发表于 2022-09-18 10:43:15">2022-09-18</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('https://img.zcool.cn/community/0191d75b56c8fea8012036be9b3118.jpg@1280w_1l_2o_100sh.jpg')"><div id="footer-wrap"><div class="copyright">&copy;2022 By Mr.Guo</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="chat_btn" type="button" title="聊天"><i class="fas fa-sms"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><script src="/js/search/local-search.js"></script><script>var preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',preloader.endLoading())</script><div class="js-pjax"><script>function loadValine () {
+  function initValine () {
+    const valine = new Valine(Object.assign({
+      el: '#vcomment',
+      appId: '8d1ybooodxFfH0ImDQIBLEMb-gzGzoHsz',
+      appKey: 'h8XguPcF4f0w8fDj7Uksltgz',
+      avatar: 'monsterid',
+      serverURLs: 'https://cdn.jsdelivr.net/npm/valine@1.5.1/dist/Valine.min.js',
+      emojiMaps: "",
+      path: window.location.pathname,
+      visitor: false
+    }, null))
+  }
+
+  if (typeof Valine === 'function') initValine() 
+  else getScript('https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js').then(initValine)
+}
+
+if ('Valine' === 'Valine' || !false) {
+  if (false) btf.loadComment(document.getElementById('vcomment'),loadValine)
+  else setTimeout(loadValine, 0)
+} else {
+  function loadOtherComment () {
+    loadValine()
+  }
+}</script></div><canvas class="fireworks" mobile="false"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/fireworks.min.js"></script><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-nest.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div>
+        <style>
+            [bg-lazy] {
+                background-image: none !important;
+                background-color: #eee !important;
+            }
+        </style>
+        <script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                preloadRatio: 1,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(e){e.imageLazyLoadSetting.processImages=t;var n=e.imageLazyLoadSetting.isSPA,i=e.imageLazyLoadSetting.preloadRatio||1,r=o();function o(){var t=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")),e=Array.prototype.slice.call(document.querySelectorAll("[bg-lazy]"));return t.concat(e)}function t(){n&&(r=o());for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(e.innerHeight*i||document.documentElement.clientHeight*i)&&function(){var t,e,n,i,o=r[a];e=function(){r=r.filter(function(t){return o!==t})},(t=o).hasAttribute("bg-lazy")?(t.removeAttribute("bg-lazy"),e&&e()):(n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,t.removeAttribute("data-original"),e&&e()},t.src!==i&&(n.src=i))}()}function a(){clearTimeout(t.tId),t.tId=setTimeout(t,500)}t(),document.addEventListener("scroll",a),e.addEventListener("resize",a),e.addEventListener("orientationchange",a)}(this);</script></body></html>
